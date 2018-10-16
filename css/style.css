@@ -8024,7 +8024,6 @@ header {
             line-height: 46px;
           }
           .about-us .details a {
-            letter-spacing: 0.6rem;
             position: absolute;
             top: 892px;
             left: 34px;
@@ -8033,8 +8032,9 @@ header {
             z-index: 9999;
             line-height: 46px;
             border: 2px solid #fff;
-            color:#fff;
-            padding: 5px 70px;
+            color: #fff;
+            letter-spacing: 0.5rem;
+            padding: 5px 29px;
             transition: all ease-in-out 0.3s;
           }
           .about-us .details a:hover {
