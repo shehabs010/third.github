@@ -46,7 +46,9 @@ html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -ms-overflow-style: scrollbar;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);height:100%; }
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);height:100%; 
+  
+}
   
 @-ms-viewport {
   width: device-width; }
@@ -494,8 +496,50 @@ pre {
       .portfolio.left-s img{
         height:100% !important;
       }
+      .p-absolute{
+        position: absolute;
+        top: 20%;
+        left: 0;
+      }
+      .colorlib-table-cell li{
+        position: relative;
+      }
+      .colorlib-table-cell ul.children{
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translateX(1000%);
+        transition: all ease-in-out .3s;
+        z-index: 9999;
+      }
+      .colorlib-table-cell .parent li.active .children {
+        transform: translateX(0%);
+      }
+      .colorlib-table-cell p {
+      font-size: 3rem;
+      color: #fff;
+      text-transform: capitalize;
+      }
+      .colorlib-table-cell .parent li.active{
+        position: relative;
+      }
+      .colorlib-table-cell .parent li.active a:after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: inline-block;
+        content: '';
+        width:100%;
+        background: #fff;
+        height: 2px;
+        transition: all ease-in-out 0.3s;
+     
+      }
+
     }
 
+
+     
 .container-fluid {
   width: 100%;
   padding-right: 15px;
@@ -1203,7 +1247,24 @@ pre {
     margin-left: 83.33333%; }
   .offset-lg-11 {
     margin-left: 91.66667%; } }
-
+@media(max-width:1024px){
+  .about-us .details span {
+    position: absolute;
+    top: 428px;
+    left: 34px !important;
+    word-wrap: inherit;
+    color: #fff;
+    z-index: 999;
+    width: 100% !important;
+    max-height: 400px !important;
+    line-height: 46px;
+    padding-right: 53px;
+    overflow: hidden;
+}
+.about-us .details b {
+  font-size: 2.8rem !important;
+}
+}
 @media (min-width: 1200px) {
   .col-xl {
     -ms-flex-preferred-size: 0;
@@ -7374,13 +7435,15 @@ h1, h2, h3, h4, h5,
 #colorlib-main-nav {
   position: absolute;
   top: 0;
+  overflow-x: hidden;
+  visibility:hidden;
   bottom: 0;
   right: 0;
   padding: 0;
   width: 100%;
   height: 100%;
   background: #b11013;
-  z-index: 1002;
+  z-index: 99999999;
   text-align: center;
   visibility: hidden;
   opacity: 0;
@@ -7506,24 +7569,19 @@ h1, h2, h3, h4, h5,
       margin: 0;
       list-style: none;
       font-weight: 400; }
-      #colorlib-main-nav ul li a {
-        display: block;
+      #colorlib-main-nav ul.parent li a {
+        display: inline-block;
+        font-family: 'Montserrat', sans-serif;
         color: white;
         padding: 5px 0; }
-        #colorlib-main-nav ul li a span {
+        #colorlib-main-nav ul.parent li a  {
           font-size: 30px;
           color: white;
           position: relative;
           padding: 0 10px; }
-          #colorlib-main-nav ul li a span small {
-            position: absolute;
-            bottom: 7px;
-            left: -30px;
-            font-size: 16px;
-            color: rgba(255, 255, 255, 0.3);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
+          
           @media (max-width: 767.98px) {
-            #colorlib-main-nav ul li a span {
+            #colorlib-main-nav ul li a {
               font-size: 30px; } }
         #colorlib-main-nav ul li a:hover, #colorlib-main-nav ul li a:active, #colorlib-main-nav ul li a:focus {
           outline: none;
@@ -7540,7 +7598,7 @@ h1, h2, h3, h4, h5,
         text-decoration: underline; }
         #colorlib-main-nav ul li a:hover span {
           color:rgba(250,250,250,0.5);
-          text-decoration: underline; }
+          }
         #colorlib-main-nav ul li.active a span:before {
           background: #53d397;
           visibility: visible;
@@ -7876,6 +7934,8 @@ header {
   background: #53d397; }
   .background-after-video{
     position: relative;
+    background: #000;
+    padding: 5rem 0;
   }
 
   #myVideo{
@@ -8058,21 +8118,13 @@ header {
         background-size: 8.5px;
         z-index: 0;
       }
-      @keyframes fisrtTop {
-        from{
-          transform: translateY(0px);
-        }
-        to{
-          transform: translateY(-50px); 
-        }
-      }
+
       .about-us .col-md-6{
         transform: translateY(0);
         transition: all ease-in-out .3s;
       }
       .about-us .col-md-6:first-child{
-        -webkit-animation: firstTop .3s; /* Safari 4.0 - 8.0 */
-         animation: firstTop 3s;
+
          transform: translateY(-50px);
         transition: all ease-in-out 0.3s;
       }
@@ -8096,6 +8148,31 @@ header {
       .about-us .right-side img{
         max-width: 100%;
       }
+        @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  .fadeInUp {
+    animation-name: fadeInUp;
+ 
+  }
+  .duration-3s{
+    animation-duration: 3s;
+  }
+  .duration-4s{
+    animation-duration: 3s;
+  }
+  .duration-5s{
+    animation-duration: 3s;
+  }
       /*--------------------------------waves-section-----------------------------*/
 .sea-wrapper {
   overflow: hidden;
@@ -8155,7 +8232,7 @@ position: relative;
   position: relative;
   z-index: 0;
   overflow: hidden; }
-  
+
   .portfolio img {
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
@@ -8452,7 +8529,30 @@ textarea.form-control {
 
 .ftco-bg-dark {
   background: #3c312e; }
-
+  footer span.lines{
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    top: 0;
+    background: #fff;
+ 
+}
+  footer span.lines:after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    top: 26px;
+}
+footer span.lines:before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 3px;
+  background: #fff;
+  top: 13px;
+}
 .ftco-footer {
   font-size: 16px;
   background: #1b212c;

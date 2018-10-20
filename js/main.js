@@ -7,7 +7,6 @@ $(document).ready(function($) {
 
 	"use strict";
 
-
 	$(window).stellar({
     responsive: false,
     parallaxBackgrounds: true,
@@ -17,9 +16,11 @@ $(document).ready(function($) {
     scrollProperty: 'scroll'
   });
 
-	// Scrollax
-  $.Scrollax();
 
+	// Scrollax
+	$.Scrollax();
+	
+	$("body").niceScroll();
 
 	// loader
 	var loader = function() {
