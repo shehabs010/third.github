@@ -117,13 +117,13 @@
   
   .slide__text {
     position: absolute;
-    top: 50%;
+    top: 29%;
     left: 5%;
     width: 23%;
     text-transform: uppercase;
     word-wrap: break-word;
     color: #fff;
-    font-size: 45px;
+    font-size: 29px;
     font-weight: 800;
     -webkit-transform: translate3d(0, -50%, 0) rotate(0.01deg);
     transform: translate3d(0, -50%, 0) rotate(0.01deg);
