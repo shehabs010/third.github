@@ -1681,7 +1681,7 @@ pre {
       width: 250px !important;
       height: 100%;
       display: flex;
-      top: 61px;
+      top: 84px;
       flex-direction: column;
       overflow-y: auto;
     }
@@ -8633,8 +8633,9 @@ textarea.form-control {
         border: 2px solid #1b212c; }
 
 .ftco-animate {
-  opacity: 0;
-  visibility: hidden; }
+  opacity: 1;
+  visibility:visible;
+ }
 
 .bg-primary {
   background: #53d397 !important; }
