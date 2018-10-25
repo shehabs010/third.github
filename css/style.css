@@ -147,12 +147,12 @@ sup {
   top: -.5em; }
 
 a {
-  color: #79efb4;
+  color: #d51b1b;
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects; }
   a:hover {
-    color: #35e78e;
+    color: #d51b1b;
     text-decoration: underline; }
 
 a:not([href]):not([tabindex]) {
@@ -535,7 +535,9 @@ pre {
         transition: all ease-in-out 0.3s;
      
       }
-
+      header::after{
+        display:block !important;
+      }
     }
 
 
@@ -1265,6 +1267,7 @@ pre {
   font-size: 2.8rem !important;
 }
 }
+
 @media (min-width: 1200px) {
   .col-xl {
     -ms-flex-preferred-size: 0;
@@ -1631,7 +1634,58 @@ pre {
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: -ms-autohiding-scrollbar; }
     .table-responsive-xl > .table-bordered {
-      border: 0; } }
+      border: 0; } 
+      #navbarSupportedContent{
+      position: fixed;
+      width: 250px !important;
+      height: 100%;
+      display: flex;
+      top: 61px;
+      flex-direction: column;
+      transform: translateX(-200%);
+      background: #d51515;
+      transition: all ease-in-out 0.2s;
+        left: 0;
+    }
+    .navbar-nav{
+      display: block;
+      width:100%;
+    }
+    .navbar-nav .nav-link{
+      display: block;
+      color:#fff;
+      padding-left:13px !important; 
+      border-bottom: 1px solid #fff;
+    }
+    .overshow{
+    
+      position: fixed !important;
+      width: 100%;
+      height: 100%;
+      transition: all ease-in-out 0.3s;
+    
+    }
+    .overshow:before{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background:rgba(0, 0, 0, 0.87);
+      top:0;
+      z-index: 999999;
+      content:'';
+      transform: translateX(0%);
+    }
+    #navbarSupportedContent.show{
+      transform: translateX(0%);
+      position: fixed;
+      width: 250px !important;
+      height: 100%;
+      display: flex;
+      top: 61px;
+      flex-direction: column;
+      overflow-y: auto;
+    }
+    }
 
 .table-responsive {
   display: block;
@@ -3518,12 +3572,22 @@ a.nav-link{
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
       -ms-flex-direction: row;
-      flex-direction: row; }
+      flex-direction: row;
+    width: 100%; }
       .navbar-expand-lg .navbar-nav .dropdown-menu {
         position: absolute; }
       .navbar-expand-lg .navbar-nav .nav-link {
         padding-right: 0.5rem;
-        padding-left: 0.5rem; }
+        padding-left: 0.5rem;
+        font-size: 15px;
+        padding-top: 0;
+        padding-bottom: 0;
+        color: #fff;
+        margin-right: 18px;
+        text-transform: capitalize;}
+        li.nav-item:last-child .nav-link {
+          margin-right: 0;
+      }
     .navbar-expand-lg > .container,
     .navbar-expand-lg > .container-fluid {
       -ms-flex-wrap: nowrap;
@@ -3544,6 +3608,9 @@ a.nav-link{
     padding-left: 0; } }
 
 @media (min-width: 1200px) {
+  .navbar-nav{
+    justify-content: center;
+  } 
   .navbar-expand-xl {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -7418,10 +7485,10 @@ a {
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
   transition: .3s all ease;
-  color: #53d397; }
+  color: #000; }
   a:hover {
     text-decoration: none;
-    color: #53d397; }
+    color: #d51b1b; }
 
 h1, h2, h3, h4, h5,
 .h1, .h2, .h3, .h4, .h5 {
@@ -7430,7 +7497,7 @@ h1, h2, h3, h4, h5,
   font-weight: 400; }
 
 .text-primary {
-  color: #53d397 !important; }
+  color: #d51b1b !important; }
 
 #colorlib-main-nav {
   position: absolute;
@@ -7609,38 +7676,69 @@ h1, h2, h3, h4, h5,
           transform: scaleX(1); }
 
 header {
-  padding: 3em 0;
+  padding: 36px 0 0 0 !important;
   position: absolute;
-  top: 36px;
+  top: 0px;
   left: 0;
   right: 0;
   z-index: 9;
-  margin: 0 auto; }
+  margin: 0 auto;
+  background: #fff; 
+  box-shadow: 2px 3px 8px 0px rgba(0, 0, 0, 0.52);
+}
+header::after{
+  position: absolute;
+  content: url(../images/page-header-ship-black.png);
+  z-index: -1;
+  top: 3px;
+  left: 60%;
+  right: auto;
+  display:none;
+  margin: auto;
+  transform: translateX(-60%);
+}
+.fixed-top{
+  z-index: 9999999;
+}
+  header .lang li{
+margin-left: 22px;
+  }
+  .bg-red{
+    background:#d51515 !important;
+  }
+  header .lang li a.active{
+    color:#d51b1b;
+  }
   @media (max-width: 767.98px) {
     header {
-      padding: 2em 0;
-      position: absolute; } }
+      padding: 2em 0 0 ;
+      position: absolute; }
+     
+      header .colorlib-navbar-brand .colorlib-logo {
+        font-size: 15px !important; }
+        .colorlib-logo img{
+          max-height: 40px !important;
+          position: relative;
+          top: -24px;
+          left: 25px !important;
+        }
+     }
   header .colorlib-navbar-brand {
     width: 100%; }
-    header::after{
-      position: absolute;
-      content: url(../images/page-header-ship.png);
-      z-index: -1;
-      top:-21px;
-      left: 53%;
-      right: auto;
-      margin: auto;
-      transform: translateX(-50%);
-  }
+ 
     header .colorlib-navbar-brand .colorlib-logo {
-      font-size: 20px;
+      font-size: 25px;
       color: #fff;
       text-transform: uppercase;
       letter-spacing: 2px;
       font-weight: 400;
+      color:#000;
       position: relative; }
 .colorlib-logo img{
   max-height: 60px;
+  position: relative;
+  top: -24px;
+  left: 25px;
 }
 
 .colorlib-nav-toggle {
@@ -7806,9 +7904,9 @@ header {
   .owl-carousel.home-slider {
     display: block;
     z-index: 0; 
-    z-index: 0;
+
     position: fixed;
-    top: 0;
+    top: 42px;
     width: 100%;
     z-index: inherit 0;
   }
@@ -8049,7 +8147,7 @@ header {
         position: relative;
       background-size: 8.5px;
       font-family: 'Montserrat', sans-serif;  
-      height: 900px;
+      height: 990px;
           }
           
           .about-us .details p {
@@ -8105,7 +8203,7 @@ header {
       .about-us .container{
         position: relative;
         z-index: 99999;
-        transform: translateY(-6.125rem);
+        transform: translateY(-1px);
       }
       .about-us:after{
         position: absolute;
@@ -8125,7 +8223,7 @@ header {
       }
       .about-us .col-md-6:first-child{
 
-         transform: translateY(-50px);
+         transform: translateY(0px);
         transition: all ease-in-out 0.3s;
       }
 
@@ -8247,8 +8345,19 @@ position: relative;
   font-size: 24px; }
   .services h3 span {
     color: #53d397; }
-  
-  
+    @media (max-width: 400.98px) {
+      header{
+        padding-top:22px !important; 
+      }
+    header .colorlib-navbar-brand .colorlib-logo {
+      font-size: 12px !important; font-weight: bold; }
+      .colorlib-logo img{
+        max-height: 40px !important;
+        position: relative;
+        top: -19px;
+        left: 25px !important;
+      }
+    }
 @media (max-width: 767.98px) {
   .req-quote {
     text-align: center; } }

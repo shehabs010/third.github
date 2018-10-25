@@ -6,7 +6,12 @@
 $(document).ready(function($) {
 
 	"use strict";
-
+	$('.navbar-toggler').on('click',function(){
+		$('#colorlib-page').toggleClass('overshow');
+	})
+		
+		
+	
 	$(window).stellar({
     responsive: false,
     parallaxBackgrounds: true,
