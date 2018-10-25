@@ -3555,6 +3555,7 @@ a.nav-link{
       .bg-red {
         background: rgba(213, 21, 21, 0.61) !important;
       }
+
 @media (max-width: 991.98px) {
   .navbar-expand-lg > .container,
   .navbar-expand-lg > .container-fluid {
@@ -7686,9 +7687,7 @@ header {
   z-index: 9;
   margin: 0 auto;
   background: #fff; 
-  height: 96px;
   box-shadow: 2px 3px 8px 0px rgba(0, 0, 0, 0.52);
-
 }
 header::after{
   position: absolute;
@@ -7708,7 +7707,7 @@ header::after{
 margin-left: 22px;
   }
   .bg-red{
-    background: rgba(213, 21, 21, 0.66) !important;
+    background:#d51515 !important;
   }
   header .lang li a.active{
     color:#d51b1b;
