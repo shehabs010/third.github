@@ -8578,7 +8578,7 @@ position: relative;
   box-shadow: none !important;
   border: 1px solid #ccd3e0; }
   .form-control:focus, .form-control:active {
-    border-color: #4d4d4d; }
+    border-color: #d51515; }
 
 textarea.form-control {
   height: inherit !important; }
@@ -9138,7 +9138,7 @@ footer span.lines:before {
       background: #53d397; }
 
 .contact-section .contact-info p a {
-  color: #53d397; }
+  color: #d51515; }
 
 .block-9 .form-control {
   outline: none !important;
