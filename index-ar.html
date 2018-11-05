@@ -5,10 +5,10 @@
 			<meta charset="utf-8">
 
 			<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-			<link rel="stylesheet" href="css/bootstrap.min.css">
+			
 			<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 			<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
-			<!-- <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css"> -->
+			<link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
 			
 	
 			
@@ -20,14 +20,15 @@
 
 			<link rel="stylesheet" href="css/ionicons.min.css">
 
-
 			<link rel="stylesheet" href="css/animate.min.css">
 			<link rel="stylesheet" href="css/animate.css">
 			<link rel="stylesheet" href="css/flaticon.css">
 			<link rel="stylesheet" href="css/icomoon.css">
 			<link rel="stylesheet" href="css/according-slider.css">
 
-			<link rel="stylesheet" href="css/style.css">
+			<link rel="stylesheet" href="css/style-ar.css">
+			<link rel="stylesheet" href="css/bootstrap-rtl.css">
+
 		</head>
 		<body>
 
@@ -364,7 +365,7 @@
 				<footer class="ftco-footer ftco-bg-dark ftco-section">
 					<span class="lines"></span>
 					<div class="container">
-						<div class="row mb-3 justify-content-center">
+						<div class="row mb-5 justify-content-center">
 							<div class="col-md-5 text-center">
 								<div class="ftco-footer-widget mb-3">
 									<ul class="ftco-footer-social list-unstyled">
@@ -377,62 +378,6 @@
 									<h2 class="mb-3">Contact Us</h2>
 									<p class="email"><a href="#">info@monacoyachtingagency.com</a></p>
 								</div>
-								
-							</div>
-							
-						</div>
-						<div class="row">
-							<div class="col-md-12 text-center">
-								<div class="contact-phone  d-flex flex-wrap">
-									<div class="col-lg-3 col-md-3 col-sm-12">
-										<p class="mb-0 b-bottom">
-											Monte Carlo
-										</p>
-										<div class="number">
-										<p class="mb-0">
-											+37 799 90 00 03
-										</p>
-										<p class="mb-0">
-											+33 663 53 55 44
-										</p>
-									</div>
-									</div>
-									<div class="col-lg-3 col-md-3 col-sm-12">
-										<p class="mb-0 b-bottom">
-											USA
-										</p>
-										<div class="number">
-										<p class="mb-0">
-											+1 917 21 68 570
-										</p>
-										
-									</div>
-									</div>
-									<div class="col-lg-3 col-md-3 col-sm-12">
-										<p class="mb-0 b-bottom">
-											Moscow 
-
-										</p>
-										<div class="number">
-										<p class="mb-0">
-											+79 268 43 26 02
-										</p>
-										
-									</div>
-									</div>
-									<div class="col-lg-3 col-md-3 col-sm-12">
-										<p class="mb-0 b-bottom">
-											Arabic region
-
-										</p>
-										<div class="number">
-										<p class="mb-0">
-											+971 0 554 242094
-										</p>
-										
-									</div>
-									</div>
-								</div>
 							</div>
 						</div>
 						<div class="row">
@@ -441,7 +386,6 @@
 								<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 				Copyright &copy;All rights reserved | by <a href="#" target="_blank">Monaco Yachting Agency</a>
 				<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-				<p> Design By <a href="https://www.facebook.com/shehab.elrefay"> Aspiration	</a></p>
 							</div>
 						</div>
 					</div>
@@ -453,7 +397,54 @@
 				</div>
 			
 				<!-- Modal -->
-			
+				<div class="modal fade" id="modalRequest" tabindex="-1" role="dialog" aria-labelledby="modalRequestLabel" aria-hidden="true">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="modalRequestLabel">Request a Quote</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<form action="#">
+									<div class="form-group">
+										<label for="appointment_name" class="text-black">Full Name</label>
+										<input type="text" class="form-control" id="appointment_name">
+									</div>
+									<div class="form-group">
+										<label for="appointment_email" class="text-black">Email</label>
+										<input type="text" class="form-control" id="appointment_email">
+									</div>
+									<div class="row">
+										<div class="col-md-6">
+											<div class="form-group">
+												<label for="appointment_date" class="text-black">Date</label>
+												<input type="text" class="form-control" id="appointment_date">
+											</div>    
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<label for="appointment_time" class="text-black">Time</label>
+												<input type="text" class="form-control" id="appointment_time">
+											</div>
+										</div>
+									</div>
+									
+
+									<div class="form-group">
+										<label for="appointment_message" class="text-black">Message</label>
+										<textarea name="" id="appointment_message" class="form-control" cols="30" rows="10"></textarea>
+									</div>
+									<div class="form-group">
+										<input type="submit" value="Send Message" class="btn btn-primary">
+									</div>
+								</form>
+							</div>
+							
+						</div>
+					</div>
+				</div>
 			</div>
 
 
@@ -470,6 +461,8 @@
 			<script src="js/aos.js"></script>
 			<script src="js/jquery.animateNumber.min.js"></script>
 			<script src="js/scrollax.min.js"></script>
+			<script src="js/bootstrap-datepicker.js"></script>
+			<script src="js/jquery.timepicker.min.js"></script>
 			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
 			<script src="js/google-map.js"></script>
 			<script src="js/according-silder.js"></script>

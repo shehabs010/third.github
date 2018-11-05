@@ -9,8 +9,9 @@ $(document).ready(function($) {
 	$('.navbar-toggler').on('click',function(){
 		$('#colorlib-page').toggleClass('overshow');
 	})
-		
-		
+
+	
+
 	
 	$(window).stellar({
     responsive: false,
